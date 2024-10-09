@@ -1,0 +1,30 @@
+<mvc:View
+  controllerName="sap.ui.demo.helloworld.controller.App"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:core="sap.ui.core"
+  xmlns="sap.m"
+  displayBlock="true"
+  >
+  <!-- acts as the main container for managing pages in your application, -->
+<App>  
+  <!-- Page to structure the content -->
+  <Page title="Input Form">
+    <content>
+      <!-- Vertical box layout for input fields -->
+      <VBox class="blackInput">
+        <!-- Input field 1 with custom CSS class -->
+        <Input placeholder="Enter your name" id="nameInput" class="blackInput" />
+
+        <!-- Input field 2 with custom CSS class -->
+        <Input placeholder="Enter your email" id="emailInput" class="blackInput" />
+
+        <!-- Input field 3 with custom CSS class -->
+        <Input placeholder="Enter your message" id="messageInput" class="blackInput" />
+
+        <!-- Submit button -->
+        <Button text="Submit" press="onSubmit" />
+      </VBox>
+    </content>
+  </Page>
+  </App>
+</mvc:View>
