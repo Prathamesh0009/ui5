@@ -1,0 +1,14 @@
+<mvc:View
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m">
+  <App>
+  <Page title="Second Page">
+    <content>
+      <VBox>
+        <Image src="https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png" alt="Sample Image" />
+        <Text text="This is the second page with an image and a paragraph." />
+      </VBox>
+    </content>
+  </Page>
+  </App>
+</mvc:View>

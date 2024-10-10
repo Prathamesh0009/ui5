@@ -1,7 +1,8 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
+    "sap/ui/core/UIComponent",
     "sap/m/MessageToast"  // Import MessageToast for notifications
-  ], function (Controller, MessageToast) {
+  ], function (Controller, MessageToast, UIComponent) {
     "use strict";
     
     return Controller.extend("sap.ui.demo.helloworld.controller.App", {
@@ -19,7 +20,8 @@ sap.ui.define([
         var message = this.byId("messageInput").getValue();
   
         // You can perform validation here (e.g., check if fields are empty)
-  
+        var oRouter = this.getOwnerComponent().getRouterfor(this);
+        oRouter.navTo("View2")
         // Display the message "Message Submitted" using a MessageToast
         MessageToast.show("Message Submitted");
   

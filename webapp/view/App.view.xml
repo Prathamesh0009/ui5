@@ -6,7 +6,7 @@
   displayBlock="true"
   >
   <!-- acts as the main container for managing pages in your application, -->
-<App>  
+<App id="app">  
   <!-- Page to structure the content -->
   <Page title="Input Form">
     <content>

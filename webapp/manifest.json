@@ -1,34 +1,70 @@
 {
-    "sap.app": {
+  "sap.app": {
       "id": "sap.ui.demo.helloworld",
       "type": "application",
       "applicationVersion": {
-        "version": "1.0.0"
+          "version": "1.0.0"
       },
       "title": "Hello World App",
       "description": "A simple UI5 Hello World App"
-    },
-    "sap.ui5": {
+  },
+  "sap.ui5": {
       "rootView": {
-        "viewName": "sap.ui.demo.helloworld.view.App",
-        "type": "XML",
-        "id": "app"
+          "viewName": "sap.ui.demo.helloworld.view.App",
+          "type": "XML",
+          "id": "app"
       },
-      
       "dependencies": {
-        "minUI5Version": "1.60.0",
-        "libs": {
-          "sap.m": {}
-        }
+          "minUI5Version": "1.60.0",
+          "libs": {
+              "sap.m": {}
+          }
       },
       "resources": {
-        "css": [
-          {
-            "uri": "css/style.css"
-          }
-        ]
+          "css": [
+              {
+                  "uri": "css/style.css"
+              }
+          ]
       },
-      "models": {}
-    }
+      "routing": {
+          "config": {
+              "routerClass": "sap.m.routing.Router",
+              "viewType": "XML",
+              "viewPath": "sap.ui.demo.helloworld.view",
+              "controlId": "app",
+              "transition":"slide",
+              "controlAggregation": "pages",
+              "async": true
+          },
+          "routes": [
+            {
+              "name": "App",
+              "pattern": "",
+              "target": "App"
+            },
+              {
+                  "name": "View2",
+                  "pattern": "View2",
+                  "target": "View2"
+              }
+          ],
+          "targets": {
+            "App":{
+              "viewType": "XML",
+              "transition":"slide",
+              "clearControlAggregation": false,
+              "viewName": "App",
+              "viewLevel": 1
+            },
+              "View2": {
+                "viewType": "XML",
+              "transition":"slide",
+              "clearControlAggregation": false,
+                  "viewName": "View2",
+                  "viewLevel": 2
+              }
+          }
+      }
   }
-  
+}
